@@ -23,6 +23,34 @@ body {
     font-weight: 900;
 }
 
+.nav {
+    background-color: #00334e;
+    padding: 0 20px;
+}
+
+.nav-link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item > a{
+    color: #ffffff;
+}
+
+.nav-logo {
+    width: 100px;
+}
+
+.homepage {
+    background-image: url("./images/star-wars-lego.jpeg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: calc(100vh - 54px);
+}
+
 .list-item {
     display: inline-block;
     margin: 5px 10px;

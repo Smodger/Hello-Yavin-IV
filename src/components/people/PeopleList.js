@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const PeopleList = () => {
@@ -19,13 +20,18 @@ const PeopleList = () => {
 
     const listPeople = () => {
         return people.map((person, i) => {
-            return <p key={i}>{person.name}</p>
+            return (
+                <Link key={i} to={`/people/${i + 1}`}>
+                    <div className="list-item">
+                        <p>{person.name}</p>
+                    </div>
+                </Link>
+            )
         });
     }
 
     return (
-        <div>
-            list of people
+        <div className="text-center">
             {listPeople()}
         </div>
     )
