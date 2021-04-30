@@ -1,13 +1,21 @@
 import './App.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+
 import FilmList from "./components/films/FilmList";
-import PeopleList from "./components/people/PeopleList";
-import PlanetList from "./components/planets/PlanetsList";
-import SpeciesList from "./components/species/SpeciesList";
-import StarshipsList from "./components/starships/StarshipsList";
-import VehiclesList from "./components/vehicles/VehiclesList";
-import ResourceContainer from "./components/ResourceContainer";
 import FilmShow from "./components/films/FilmShow"
+
+import PeopleList from "./components/people/PeopleList";
+
+import PlanetList from "./components/planets/PlanetsList";
+
+import SpeciesList from "./components/species/SpeciesList";
+
+import StarshipsList from "./components/starships/StarshipsList";
+
+import VehiclesList from "./components/vehicles/VehiclesList";
+
+import ResourceContainer from "./components/ResourceContainer";
+
 
 function App() {
   return (

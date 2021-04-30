@@ -20,10 +20,9 @@ const FilmList = () => {
 
 	const listFilms = () => {
 		return films.map((film, i) => {
-            console.log('film', film);
 			return (
-                <Link>
-                    <div key={i} className="list-item">
+                <Link key={i} to={`/films/${i + 1}`}>
+                    <div className="list-item">
                         <p>{film.title}</p>
                     </div>
                 </Link>
