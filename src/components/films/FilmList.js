@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
+
+import List from "../List";
 
 const FilmList = () => {
 	const [films, setFilms] = useState([]);
@@ -18,23 +19,10 @@ const FilmList = () => {
 		return axios.get("https://swapi.dev/api/films/");
 	};
 
-	const listFilms = () => {
-		return films.map((film, i) => {
-			return (
-                <Link key={i} to={`/films/${i + 1}`}>
-                    <div className="list-item">
-                        <p>{film.title}</p>
-                    </div>
-                </Link>
-                
-            )
-		});
-	};
-
 	return (
-		<div className="text-center">
-            {listFilms()}
-		</div>
+        <div className="container mt-3">
+            <List list={films} resource="films"></List>
+        </div>
 	);
 };
 

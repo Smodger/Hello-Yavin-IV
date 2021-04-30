@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+import List from "../List";
+
 const VehiclesList = () => {
     const [vehicles, setVehicles] = useState([]);
 
@@ -18,16 +20,9 @@ const VehiclesList = () => {
         // error handling?
     }
 
-    const listVehicles = () => {
-        return vehicles.map((vehicle, i) => {
-            return <p key={i}>{vehicle.name}</p>
-        })
-    }
-
     return (
-        <div>
-            list of all vehicles:
-            {listVehicles()}
+        <div className="container mt-3">
+            <List list={vehicles} resource="vehicles"></List>
         </div>
     )
 }

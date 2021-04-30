@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+import List from "../List";
+
 const SpeciesList = () => {
     const [species, setSpecies] = useState([]);
 
@@ -17,16 +19,9 @@ const SpeciesList = () => {
         return axios.get('https://swapi.dev/api/species/');
     }
 
-    const listSpecies = () => {
-        return species.map((alien,i) => {
-            return <p key={i}>{alien.name}</p>
-        })
-    }
-
     return (
-        <div>
-            list of all species
-            {listSpecies()}
+        <div className="container mt-3">
+            <List list={species} resource="species"></List>
         </div>
     )
 }

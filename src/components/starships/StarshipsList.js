@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+import List from "../List";
+
 const StarshipsList = () => {
     const [starships, setStarships] = useState([]);
 
@@ -13,20 +15,13 @@ const StarshipsList = () => {
         fetchData();        
     }, [])
 
-    const listStarships = () => {
-        return starships.map((starship, i) => {
-            return <p key={i}>{starship.name}</p>
-        })
-    }
-
     const getStartships = () => {
         return axios.get('https://swapi.dev/api/starships/');
     }
 
     return (
-        <div>
-            list of all starships
-            {listStarships()}
+        <div className="container mt-3">
+            <List list={starships} resource="starships"></List>
         </div>
     )
 }

@@ -23,6 +23,10 @@ body {
     font-weight: 900;
 }
 
+.semi-bold {
+    font-weight: 700;
+}
+
 .nav {
     background-color: #00334e;
     padding: 0 20px;
@@ -51,13 +55,32 @@ body {
     height: calc(100vh - 54px);
 }
 
-.list-item {
-    display: inline-block;
-    margin: 5px 10px;
-    padding: 10px 20px;
-    background-color: cadetblue;
-    border-radius: 5px;
+.blaster {
+    height: 12px;
+    position: relative;
+    top: 32px;
+    background-image: linear-gradient(to right, #fefefe, red);
+    transition: 1s;
+    border-radius: 100px / 50px;
     border: 1px solid #fefefe;
+}
+
+.animation-child {
+    animation: left-to-right 1s;
+    transform-origin: 0% 50%;
+}
+
+@keyframes left-to-right {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.list-item {
+    font-size: 20px;
 }
 
 .parralax-container {
