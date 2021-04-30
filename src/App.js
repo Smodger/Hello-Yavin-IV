@@ -7,6 +7,7 @@ import SpeciesList from "./components/species/SpeciesList";
 import StarshipsList from "./components/starships/StarshipsList";
 import VehiclesList from "./components/vehicles/VehiclesList";
 import ResourceContainer from "./components/ResourceContainer";
+import FilmShow from "./components/films/FilmShow"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Switch>
                 <Route path="/" exact component={ResourceContainer}></Route>
                 <Route path="/films" exact component={FilmList}></Route>
+                <Route path="/films/:id" exact component={FilmShow}></Route>
                 <Route path="/people" exact component={PeopleList}></Route>
                 <Route path="/planets" exact component={PlanetList}></Route>
                 <Route path="/species" exact component={SpeciesList}></Route>
