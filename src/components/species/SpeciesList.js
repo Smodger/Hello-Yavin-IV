@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-import List from "../List";
+import List from "../UI/List";
 
 const SpeciesList = () => {
     const [species, setSpecies] = useState([]);

@@ -14,7 +14,7 @@ const Intro = (props) => {
         };
     }, [])
     return (
-        <div className="parralax-container">
+        <div className="parralax-container p-5">
             <div className="parralax-bg" style={{ transform : `translateY(${offsetY * 2}px)` }}></div>
             <div className="parralax-fg text-center" style={{ transform : `translateY(${offsetY * 0.2}px)` }}>
                 <h4 className="font-large bold">{props.film.title}</h4>
@@ -26,7 +26,7 @@ const Intro = (props) => {
                 ></FilmInfo>
 
                 <div style={{ marginTop : 50 }}>
-                    <Link to="/" style={{ color : 'yellow' }}>Back</Link>
+                    <Link to="/" style={{ color : '#F7BD2F' }}>Back</Link>
                 </div>
             </div>
         </div>

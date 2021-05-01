@@ -1,0 +1,12 @@
+{
+    "lightSide" : {
+        "color" : "#2E67F8",
+        "img" : "path/to/image",
+        "icon" : "light-side-icon.jpeg"
+    },
+    "darkSide" : {
+        "color" : "#e10000",
+        "img" : "path/to/image",
+        "icon" : "empire-icon.jpeg"
+    }
+}
