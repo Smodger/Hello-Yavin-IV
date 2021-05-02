@@ -58,7 +58,6 @@ p, h4, h6, li {
 
 .homepage {
     background-size: cover;
-    background-position: bottom;
     background-repeat: no-repeat;
     width: 100%;
     height: calc(100vh - 54px);
@@ -168,4 +167,9 @@ p, h4, h6, li {
   
   .slider.round:before {
     border-radius: 50%;
+  }
+
+  .manufacturer-details-container {
+      border: 1px black dashed;
+      border-radius: 5px;
   }

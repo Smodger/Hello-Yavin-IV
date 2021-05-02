@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-import List from "../UI/List";
+import Chart from "../UI/Chart";
 
 const VehiclesList = () => {
     const [vehicles, setVehicles] = useState([]);
@@ -20,11 +20,15 @@ const VehiclesList = () => {
         // error handling?
     }
 
-    return (
-        <div className="container mt-3">
-            <List list={vehicles} resource="vehicles"></List>
-        </div>
-    )
+    if(vehicles.length <= 0) {
+        return <p>loading...</p>
+    }else {
+        return (
+            <div className="container mt-3">
+                <Chart array={vehicles} resource="vehicles"></Chart>
+            </div>
+        )
+    }
 }
 
 export default VehiclesList;

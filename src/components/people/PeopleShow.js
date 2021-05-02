@@ -6,7 +6,6 @@ import Garage from "./Garage";
 import StarPort from "./StarPort";
 import Images from "./Images";
 import PersonalInfo from './PersonalInfo';
-import { logDOM } from '@testing-library/react';
 
 const PeopleShow = (props) => {
     const [id] = useState(props.match.params.id);
@@ -29,7 +28,7 @@ const PeopleShow = (props) => {
         if(person.vehicles.length > 0){
             return (
                 <div className="col-4">
-                    <h6 className="my-3 semi-bold">{person && person.name}'s Starships</h6>
+                    <h6 className="my-3 semi-bold">{person && person.name}'s Vehicles</h6>
                     {
                         person.vehicles.map((vehicle, i) => {
                             let vehicleId = vehicle.slice(-3);
@@ -65,27 +64,31 @@ const PeopleShow = (props) => {
         }
     };
 
-    return (
-        <div className="container mt-3">
-            <h4 className="text-center font-large semi-bold mb-5">Star Wars Tinder</h4>
-            <div className="row">
-                <div className="col-12">
-                    <h4 style={{ fontSize : 28 }}>{person && person.name}</h4>
+    if(!person) {
+        return <p>loading ...</p>
+    }else {
+        return (
+            <div className="container mt-3">
+                <h4 className="text-center font-large semi-bold mb-5">Star Wars Tinder</h4>
+                <div className="row">
+                    <div className="col-12">
+                        <h4 style={{ fontSize : 28 }}>{person && person.name}</h4>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-4">
+                        <h6 className="my-3 semi-bold">{person && person.name}'s Information</h6>
+                        {person && <PersonalInfo person={person}></PersonalInfo>}
+                    </div>
+                    {person && getVehiclesGarage()}
+                    {person && getStarships()}
+                </div>
+                <div className="row">
+                    <Images name={person && person.name}></Images>
                 </div>
             </div>
-            <div className="row">
-                <div className="col-4">
-                    <h6 className="my-3 semi-bold">{person && person.name}'s Information</h6>
-                    {person && <PersonalInfo person={person}></PersonalInfo>}
-                </div>
-                {person && getVehiclesGarage()}
-                {person && getStarships()}
-            </div>
-            <div className="row">
-                <Images name={person && person.name}></Images>
-            </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default PeopleShow;

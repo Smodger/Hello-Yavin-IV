@@ -25,9 +25,6 @@ const ResourceContainer = () => {
                     <Link to="/people" className="nav-link">People</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/species" className="nav-link">Species</Link>
-                </li>
-                <li className="nav-item">
                     <Link to="/starships" className="nav-link">Starships</Link>
                 </li>
                 <li className="nav-item">
