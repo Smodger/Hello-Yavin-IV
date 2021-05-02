@@ -34,7 +34,6 @@ p, h4, h6, li {
 .nav {
     /* background-color: #00334e; */
     padding: 0 20px;
-    flex-wrap: nowrap;
 }
 
 .nav-link {
@@ -52,8 +51,8 @@ p, h4, h6, li {
 }
 
 .theme-toggle {
+    align-items: center;
     display: flex;
-    justify-content: flex-end;
 }
 
 .homepage {
@@ -93,8 +92,9 @@ p, h4, h6, li {
 
 .parralax-container {
     background: url('./images/space.png');
-    width: 100vw;
-    height: 300vh;
+    /* width: 100vw;
+    height: 300vh; */
+    overflow: hidden;
 }
 
 .parralax-fg {
@@ -172,4 +172,17 @@ p, h4, h6, li {
   .manufacturer-details-container {
       border: 1px black dashed;
       border-radius: 5px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .homepage.light-side {
+        background-position: 90% 0%;
+    }
+    .homepage.dark-side {
+        background-position: center;
+    }
+    .parralax-fg {
+        width: 100%;
+    }
+
   }

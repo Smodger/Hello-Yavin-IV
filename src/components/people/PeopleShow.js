@@ -69,7 +69,12 @@ const PeopleShow = (props) => {
     }else {
         return (
             <div className="container mt-3">
-                <h4 className="text-center font-large semi-bold mb-5">Star Wars Tinder</h4>
+                <div className="row mb-5">
+                    <div className="col-12">
+                        <h4 className="text-center font-large semi-bold">Star Wars Tinder</h4>
+                        <h6 className="text-center">Looking For Love in Alderaan Places</h6>
+                    </div>
+                </div>
                 <div className="row">
                     <div className="col-12">
                         <h4 style={{ fontSize : 28 }}>{person && person.name}</h4>

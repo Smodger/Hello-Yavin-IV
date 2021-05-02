@@ -30,7 +30,7 @@ const ResourceContainer = () => {
                 <li className="nav-item">
                     <Link to="/vehicles" className="nav-link">Vehicles</Link>
                 </li>
-                <div className="theme-toggle w-100 align-items-center">
+                <li className="nav-item mx-auto mx-md-0 theme-toggle">
                     <label className="switch" onChange={ctx.toggleTheme}>
                         <input type="checkbox" />
                         <span className="slider round"></span>
@@ -41,7 +41,8 @@ const ResourceContainer = () => {
                     >
                     { ctx.darkSide ? "Switch to the light side" : "Give in to your hate"}
                     </span>
-                </div>
+                </li>
+            
             </ul>
         </div>
     )

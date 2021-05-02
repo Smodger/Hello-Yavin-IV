@@ -38,7 +38,7 @@ const Chart = (props) => {
         ]
     }
 
-    const yAxisSetter = props.resource === "vehicles" ? 1500 : 4000
+    const yAxisSetter = props.resource === "vehicles" ? 1500 : 2500
 
     const options = {
         scales: {
@@ -64,10 +64,12 @@ const Chart = (props) => {
         };
 
     return (
-        <div>
-            <Bar data={data} options={options} />
-            <Bar data={costData} options={costOptions} />
-        </div>
+        <>
+            <div>
+                <Bar data={data} options={options} />
+                <Bar data={costData} options={costOptions} />
+            </div>
+        </>
     )
 }
 export default Chart;

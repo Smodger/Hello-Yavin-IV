@@ -39,13 +39,13 @@ const List = (props) => {
         return (
             <Link key={i} to={`/${props.resource}/${i + 1}`}>
                 <div className="row">
-                    <div className="col-2 p-0">
+                    <div className="col-4 col-md-2 p-0">
                         <img src={blaster} alt="Han Solo blaster" className="d-inline-block float-end" style={{ width : 100 }}></img>
                     </div>
-                    <div className="col-7 animation-parent">
+                    <div className="col-4 col-md-7 animation-parent">
                         <div className="blaster w-100 animation-child" style={ getBlasterBoltColor() }></div>
                     </div>
-                    <div className="col-3">
+                    <div className="col-4 col-md-3">
                         <span className="position-relative" style={{ top : 20 }}>
                             {getImage()}
                             <p className="d-inline-block ms-3 list-item semi-bold">

@@ -16,8 +16,10 @@ const Home = () => {
         }
     }
 
+    let contextConditionalClass = ctx.darkSide ? "dark-side" : "light-side";
+
     return (
-        <div className="homepage" style={getImages()}></div>
+        <div className={`homepage ${contextConditionalClass}`} style={getImages()}></div>
     )
 }
 
